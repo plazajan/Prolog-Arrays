@@ -6,7 +6,7 @@
 
 % https://github.com/plazajan
                     
-% Copyright 1988-2022, Jan A. Plaza
+% Copyright 1988-2022, Jan Plaza
 
 % Use under Creative Commons Attribution Share-Alike International License 4.0
 
