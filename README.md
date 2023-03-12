@@ -122,7 +122,7 @@ The following predicates are defined.
 >Arguments:  
       `Array` - a term representing array.  
       `Position` - a non-empty list of natural numbers (>=0).  
-      `NewElement` - a term (typically atom but variables and open terms allowed  
+      `NewElement` - a term (typically atom but variables and open terms allowed.  
       `NewArray` - a variable.
    
 >Result:  
@@ -139,9 +139,9 @@ The following predicates are defined.
     (5)  lastInArray(Array, Position, Element)  
     
 >Arguments:   
-      `Array` - a term representing array   
-      `Position` - a non-empty list of variables  
-      `Element` - a term (typically a variable)  
+      `Array` - a term representing array.   
+      `Position` - a non-empty list of variables.  
+      `Element` - a term (typically a variable).  
    
 >Result:  
       Variables of the list `Position` are instantiated to the indices of the 
