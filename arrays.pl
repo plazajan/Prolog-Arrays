@@ -6,7 +6,7 @@
 
 % https://github.com/plazajan
                     
-% Copyright 1988-2023, Jan Plaza
+% Copyright 1988-2023, Jan A. Plaza
 
 % This file is part of Prolog-Arrays. Prolog-Arrays is free software: 
 % you can redistribute it and/or modify it under the terms 
