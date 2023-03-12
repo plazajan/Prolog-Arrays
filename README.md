@@ -1,6 +1,6 @@
 # Prolog-Arrays
 
-Multi-dimensional, dynamic, logical arrays with logarithmic indexing,   implemented in ISO Prolog.
+Multi-dimensional, dynamic, logical arrays with logarithmic complexity indexing, implemented in ISO Prolog.
 
 Version of 2022/04/24
 
