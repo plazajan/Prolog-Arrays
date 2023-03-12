@@ -96,7 +96,7 @@ The following predicates are defined.
     
 >exactly like putIntoArray(Array, Position, Element) except that the
    following messages are supplied for the purpose of debugging:   
-   "ERROR! Incorrect specification of the position `Position``.
+   "ERROR! Incorrect specification of the position `Position`.
     `putIntoArrayM` failed."   
    "The element put in the position Position is not 
     pseudo-unifiable with the element stored.
