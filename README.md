@@ -77,9 +77,9 @@ The following predicates are defined.
 
     putIntoArray(Array, Position, Element)
   
-    Arguments:   
-      Array - a term representing array (initially a variable)  
-      Position - a non-empty list of natural numbers (>=0)  
+>Arguments:   
+>      Array - a term representing array (initially a variable)  
+>      Position - a non-empty list of natural numbers (>=0)  
       Element - a term (typically an atom but variables and open terms allowed) 
     Result:  
       Element is pseudo-unified with the term stored at the Position or  
