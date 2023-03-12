@@ -1,7 +1,7 @@
 
 % A demo for
 % Multi-dimensional, dynamic, logical arrays with logarithmic indexing, 
-% implemented using standard featues of Prolog (ISO Prolog).
+% implemented in ISO Prolog.
 
 % Version of 2022/04/24
 
