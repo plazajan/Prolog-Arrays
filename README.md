@@ -126,8 +126,8 @@ The following predicates are defined.
       `NewArray` - a variable.
    
 >Result:  
-      NewArray becomes a term representing the array containing the             
-      elements Array that contains except `Position` where `NewElement` is
+      `NewArray` becomes a term representing the array containing the             
+      elements of Array except `Position`, where `NewElement` is
       stored. `Array` and `NewArray` have a large part of their structure in
       common; therefore it is advised not to use `Array` after `NewArray` is 
       obtained - some changes made to Array may cause changes to
