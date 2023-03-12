@@ -79,7 +79,7 @@ The following predicates are defined.
   
 >Arguments:  
     `Array` - a term representing array (initially a variable).  
-    `Position` - a non-empty list of natural numbers (>=0).
+    `Position` - a non-empty list of natural numbers (>=0).  
     `Element` - a term (typically an atom but variables and open terms are allowed).
     
 >Result:  
