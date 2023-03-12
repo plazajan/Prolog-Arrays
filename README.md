@@ -6,9 +6,13 @@ Version of 2022/04/24
 
 https://github.com/plazajan
                     
-Copyright 1988-2022, Jan Plaza
+Copyright 1988-2023, Jan Plaza
 
-Use under Creative Commons Attribution Share-Alike International License 4.0
+This file is part of Prolog-Arrays. Prolog-Arrays is free software: you can redistribute it and/or modify it under the terms 
+of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. 
+Prolog-Arrays is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+You should have received a copy of the GNU General Public License along with Prolog-Arrays. If not, see https://www.gnu.org/licenses/.
 
 -----------------------------------------------------------------------------
 
