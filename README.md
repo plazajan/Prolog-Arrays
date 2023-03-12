@@ -12,7 +12,7 @@ Use under Creative Commons Attribution Share-Alike International License 4.0
 
 -----------------------------------------------------------------------------
 
-                       ARRAYS IMPLEMENTED IN PROLOG
+## ARRAYS IMPLEMENTED IN PROLOG
               
 
 We define multi-dimensional, dynamic, logical arrays with logarithmic 
