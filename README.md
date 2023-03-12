@@ -162,9 +162,9 @@ The following predicates are defined.
       `Element` - a variable.  
    
 >Result:  
-      Variables of the list Position are instantiated to the indices of the   
+      Variables of the list Position are instantiated to the indices of the    
       place in `Array` which contains a non-variable and is first in the  
-      lexicographical order. If there are no non-variables in the array   
+      lexicographical order. If there are no non-variables in the array    
       the procedure fails.  
       `Element` is instantiated to the term stored at this place.  
    
