@@ -132,12 +132,12 @@ The following predicates are defined.
       common; therefore it is advised not to use `Array` after `NewArray` is 
       obtained - some changes made to Array may cause changes to
       `NewArray`, some others need not.
-   
+
 >Backtracking:  
       The second call fails.  
 
     (5)  lastInArray(Array, Position, Element)  
-    
+
 >Arguments:   
       `Array` - a term representing array.   
       `Position` - a non-empty list of variables.  
@@ -155,21 +155,21 @@ The following predicates are defined.
       The second call fails.  
 
     (6)  genArrayMembers(Array, Position, Element)  
-    
-> Arguments:   
+
+>Arguments:   
       `Array` - a term representing array.   
       `Position` - a non-empty list of variables.  
       `Element` - a variable.  
-   
+
 >Result:  
-      Variables of the list Position are instantiated to the indices of the    
-      place in `Array` which contains a non-variable and is first in the  
-      lexicographical order. If there are no non-variables in the array    
-      the procedure fails.  
-      `Element` is instantiated to the term stored at this place.  
+      Variables of the list Position are instantiated to the indices of the
+      place in `Array` which contains a non-variable and is first in the
+      lexicographical order. If there are no non-variables in the array
+      the procedure fails.
+      `Element` is instantiated to the term stored at this place.
    
 >Backtracking:  
-      Every next call returns the lexicographically next non-variable element   
+      Every next call returns the lexicographically next non-variable element
       and its position.  
 
 
