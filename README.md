@@ -122,7 +122,7 @@ The following predicates are defined.
 >Arguments:  
       `Array` - a term representing array.  
       `Position` - a non-empty list of natural numbers (>=0).  
-      `NewElement` - a term (typically atom but variables and open terms allowed.  
+      `NewElement` - a term (typically atom but variables and open terms are allowed).  
       `NewArray` - a variable.
    
 >Result:  
