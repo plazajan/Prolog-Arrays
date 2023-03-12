@@ -78,16 +78,18 @@ The following predicates are defined.
     putIntoArray(Array, Position, Element)
   
 >Arguments:   
->      Array - a term representing array (initially a variable)  
->      Position - a non-empty list of natural numbers (>=0)  
-      Element - a term (typically an atom but variables and open terms allowed) 
-    Result:  
-      Element is pseudo-unified with the term stored at the Position or  
+      `Array` - a term representing array (initially a variable)  
+      `Position` - a non-empty list of natural numbers (>=0)  
+      `Element` - a term (typically an atom but variables and open terms allowed) 
+    
+>Result:  
+      `Element` is pseudo-unified with the term stored at the `Position` or  
       with the variable representing this place if the place is empty. If  
       the terms do not unify the procedure fails.  
-      Array becomes a term representing the initial array with the result of    
-      pseudo-unification stored at the position Position.  
-    Backtracking:  
+      `Array` becomes a term representing the initial array with the result of    
+      pseudo-unification stored at the position `Position`.  
+
+>Backtracking:  
       The second call fails.  
 
 2. putIntoArrayM(Array, Position, Element)    
