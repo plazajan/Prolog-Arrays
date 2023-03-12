@@ -98,21 +98,21 @@ The following predicates are defined.
    following messages are supplied for the purpose of debugging:   
    "ERROR! Incorrect specification of the position `Position`.
     `putIntoArrayM` failed."   
-   "The element put in the position Position is not 
+   "The element put in the position `Position` is not 
     pseudo-unifiable with the element stored.
     `putIntoArrayM` failed."
 
     (3)  getFromArray(Array, Position, Element)  
     
 >Arguments:   
-      `Array` - a term representing array   
-      `Position` - a non-empty list of natural numbers (>=0)  
-      `Element` - a term (typically a variable) 
+      `Array` - a term representing array.   
+      `Position` - a non-empty list of natural numbers (>=0).  
+      `Element` - a term (typically a variable).
        
 >Result:  
-      `Element` is pseudo-unified with the term stored at the `Position`. If  
-      terms do not unify the procedure fails. If this place is empty or there  
-      is only a variable the procedure fails.  
+      `Element` is pseudo-unified with the term stored at the `Position`. If
+      terms do not unify the procedure fails. If this place is empty or there
+      is only a variable the procedure fails.
 
 >Backtracking:  
       The second call fails.  
@@ -120,50 +120,56 @@ The following predicates are defined.
     (4)  changeArray(Array, Position, NewElement, NewArray)  
     
 >Arguments:  
-      `Array` - a term representing array  
-      `Position` - a non-empty list of natural numbers (>=0)  
+      `Array` - a term representing array.  
+      `Position` - a non-empty list of natural numbers (>=0).  
       `NewElement` - a term (typically atom but variables and open terms allowed  
-   `NewArray` - a variable  
+      `NewArray` - a variable.
    
 >Result:  
-      NewArray becomes a term representing the array containing the              
-      elements Array that contains except `Position` where `NewElement` is   
-      stored. `Array` and `NewArray` have a large part of their structure in   
-      common; therefore it is advised not to use `Array` after `NewArray` is   
-      obtained - some changes made to Array may cause changes to  
-      `NewArray`, some others need not.  
+      NewArray becomes a term representing the array containing the             
+      elements Array that contains except `Position` where `NewElement` is
+      stored. `Array` and `NewArray` have a large part of their structure in
+      common; therefore it is advised not to use `Array` after `NewArray` is 
+      obtained - some changes made to Array may cause changes to
+      `NewArray`, some others need not.
    
 >Backtracking:  
       The second call fails.  
 
-5. lastInArray(Array, Position, Element)  
-   Arguments:   
-      Array - a term representing array   
-      Position - a non-empty list of variables  
-      Element - a term (typically a variable)  
-   Result:  
-      Variables of the list Position are instantiated to the indices of the   
-      place in Array which contains a non-variable and is last in the   
-      lexicographical order. If there are no non-variables in the array the   
-      procedure fails.  
-      Element is pseudo-unified with the term stored at this place. If the        
-      terms do not unify the procedure fails.  
-   Backtracking:  
+    (5)  lastInArray(Array, Position, Element)  
+    
+>Arguments:   
+      `Array` - a term representing array   
+      `Position` - a non-empty list of variables  
+      `Element` - a term (typically a variable)  
+   
+>Result:  
+      Variables of the list `Position` are instantiated to the indices of the 
+      place in `Array` which contains a non-variable and is last in the
+      lexicographical order. If there are no non-variables in the array the
+      procedure fails.
+      `Element` is pseudo-unified with the term stored at this place. If the    
+      terms do not unify the procedure fails.
+
+>Backtracking:  
       The second call fails.  
 
-6. genArrayMembers(Array, Position, Element)  
-   Arguments:   
-      Array - a term representing array   
-      Position - a non-empty list of variables  
-      Element - a variable  
-   Result:  
+    (6)  genArrayMembers(Array, Position, Element)  
+    
+> Arguments:   
+      `Array` - a term representing array.   
+      `Position` - a non-empty list of variables.  
+      `Element` - a variable.  
+   
+>Result:  
       Variables of the list Position are instantiated to the indices of the   
-      place in Array which contains a non-variable and is first in the  
+      place in `Array` which contains a non-variable and is first in the  
       lexicographical order. If there are no non-variables in the array   
       the procedure fails.  
-   Element is instantiated to the term stored at this place.  
-   Backtracking:  
-   Every next call returns the lexicographically next non-variable element   
+      `Element` is instantiated to the term stored at this place.  
+   
+>Backtracking:  
+      Every next call returns the lexicographically next non-variable element   
       and its position.  
 
 
