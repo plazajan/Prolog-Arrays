@@ -94,13 +94,13 @@ The following predicates are defined.
 
     (2)  putIntoArrayM(Array, Position, Element)    
     
->exactly like putIntoArray(Array, Position, Element) except that the  
+>exactly like putIntoArray(Array, Position, Element) except that the
    following messages are supplied for the purpose of debugging:   
-   "ERROR! Incorrect specification of the position Position.
-    putIntoArrayM failed."   
+   "ERROR! Incorrect specification of the position `Position``.
+    `putIntoArrayM` failed."   
    "The element put in the position Position is not 
     pseudo-unifiable with the element stored.
-    putIntoArrayM failed."
+    `putIntoArrayM` failed."
 
     (3)  getFromArray(Array, Position, Element)  
     
