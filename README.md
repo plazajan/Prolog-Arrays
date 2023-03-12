@@ -1,6 +1,6 @@
 # Prolog-Arrays
 
-Multi-dimensional, dynamic, logical arrays with logarithmic indexing, implemented in ISO Prolog
+Multi-dimensional, dynamic, logical arrays with logarithmic indexing,   implemented in ISO Prolog.
 
 Version of 2022/04/24
 
@@ -75,99 +75,99 @@ taken by a list with N elements.)
 
 The following predicates are defined.
 
-1. putIntoArray(Array, Position, Element)
-   Arguments: 
-      Array - a term representing array (initially a variable)
-      Position - a non-empty list of natural numbers (>=0)
-      Element - a term (typically an atom but variables and open terms are 
-                allowed)
-   Result:
-      Element is pseudo-unified with the term stored at the Position or
-      with the variable representing this place if the place is empty. If
-      the terms do not unify the procedure fails.
-      Array becomes a term representing the initial array with the result of   
-      pseudo-unification stored at the position Position.
-   Backtracking:
-      The second call fails.
+    putIntoArray(Array, Position, Element)
+  
+    Arguments:   
+      Array - a term representing array (initially a variable)  
+      Position - a non-empty list of natural numbers (>=0)  
+      Element - a term (typically an atom but variables and open terms allowed) 
+    Result:  
+      Element is pseudo-unified with the term stored at the Position or  
+      with the variable representing this place if the place is empty. If  
+      the terms do not unify the procedure fails.  
+      Array becomes a term representing the initial array with the result of    
+      pseudo-unification stored at the position Position.  
+    Backtracking:  
+      The second call fails.  
 
-2. putIntoArrayM(Array, Position, Element)
-   exactly like putIntoArray(Array, Position, Element) except that the
-   following messages are supplied for the purpose of debugging: 
-   "ERROR! Incorrect specification of the position Position.   
-    putIntoArrayM failed." 
+2. putIntoArrayM(Array, Position, Element)    
+   exactly like putIntoArray(Array, Position, Element) except that the  
+   following messages are supplied for the purpose of debugging:   
+   "ERROR! Incorrect specification of the position Position.    
+    putIntoArrayM failed."   
    "The element put in the position Position is not    
-    pseudo-unifiable with the element stored. 
-    putIntoArrayM failed."
+    pseudo-unifiable with the element stored.  
+    putIntoArrayM failed." 
 
-3. getFromArray(Array, Position, Element)
-   Arguments: 
-      Array - a term representing array 
-      Position - a non-empty list of natural numbers (>=0)
-      Element - a term (typically a variable)
-   Result:
-      Element is pseudo-unified with the term stored at the Position. If 
-      terms do not unify the procedure fails. If this place is empty or there 
-      is only a variable the procedure fails.
-   Backtracking:
-      The second call fails.
+3. getFromArray(Array, Position, Element)  
+   Arguments:   
+      Array - a term representing array   
+      Position - a non-empty list of natural numbers (>=0)  
+      Element - a term (typically a variable)  
+   Result:  
+      Element is pseudo-unified with the term stored at the Position. If  
+      terms do not unify the procedure fails. If this place is empty or there  
+      is only a variable the procedure fails.  
+   Backtracking:  
+      The second call fails.  
 
-4. changeArray(Array, Position, NewElement, NewArray)
-   Arguments: 
-      Array - a term representing array
-      Position - a non-empty list of natural numbers (>=0)
-      NewElement - a term (typically an atom but variables and open terms are
-                allowed)
-   NewArray - a variable
-   Result:
-      NewArray becomes a term representing the array containing the            
-      elements Array that contains except Position where NewElement is 
-      stored. Array and NewArray have a large part of their structure in 
-      common; therefore it is advised not to use Array after NewArray is 
-      obtained - some changes made to Array may cause changes to
-      NewArray, some others need not.
-   Backtracking:
-      The second call fails.
+4. changeArray(Array, Position, NewElement, NewArray)  
+   Arguments:  
+      Array - a term representing array  
+      Position - a non-empty list of natural numbers (>=0)  
+      NewElement - a term (typically atom but variables and open terms allowed  
+   NewArray - a variable  
+   Result:  
+      NewArray becomes a term representing the array containing the              
+      elements Array that contains except Position where NewElement is   
+      stored. Array and NewArray have a large part of their structure in   
+      common; therefore it is advised not to use Array after NewArray is   
+      obtained - some changes made to Array may cause changes to  
+      NewArray, some others need not.  
+   Backtracking:  
+      The second call fails.  
 
-5. lastInArray(Array, Position, Element)
-   Arguments: 
-      Array - a term representing array 
-      Position - a non-empty list of variables
-      Element - a term (typically a variable)
-   Result:
-      Variables of the list Position are instantiated to the indices of the 
-      place in Array which contains a non-variable and is last in the 
-      lexicographical order. If there are no non-variables in the array the 
-      procedure fails.
-      Element is pseudo-unified with the term stored at this place. If the      
-      terms do not unify the procedure fails.
-   Backtracking:
-      The second call fails.
+5. lastInArray(Array, Position, Element)  
+   Arguments:   
+      Array - a term representing array   
+      Position - a non-empty list of variables  
+      Element - a term (typically a variable)  
+   Result:  
+      Variables of the list Position are instantiated to the indices of the   
+      place in Array which contains a non-variable and is last in the   
+      lexicographical order. If there are no non-variables in the array the   
+      procedure fails.  
+      Element is pseudo-unified with the term stored at this place. If the        
+      terms do not unify the procedure fails.  
+   Backtracking:  
+      The second call fails.  
 
-6. genArrayMembers(Array, Position, Element)
-   Arguments: 
-      Array - a term representing array 
-      Position - a non-empty list of variables
-      Element - a variable
-   Result:
-      Variables of the list Position are instantiated to the indices of the 
-      place in Array which contains a non-variable and is first in the 
-      lexicographical order. If there are no non-variables in the array 
-      the procedure fails.
-   Element is instantiated to the term stored at this place.
-   Backtracking:
-   Every next call returns the lexicographically next non-variable element 
-      and its position.
+6. genArrayMembers(Array, Position, Element)  
+   Arguments:   
+      Array - a term representing array   
+      Position - a non-empty list of variables  
+      Element - a variable  
+   Result:  
+      Variables of the list Position are instantiated to the indices of the   
+      place in Array which contains a non-variable and is first in the  
+      lexicographical order. If there are no non-variables in the array   
+      the procedure fails.  
+   Element is instantiated to the term stored at this place.  
+   Backtracking:  
+   Every next call returns the lexicographically next non-variable element   
+      and its position.  
 
 
 The following terms are used to represent arrays:
-   
-* ------- * ------- * ------- * ------- ...
-|         |         |         |
-0         #         #         #
-         / \       / \       / \
-         1-5      #...#      ...  
-                 / \   \
-                6- 10...30
+
+
+    * ------- * ------- * ------- * ------- ...
+    |         |         |         |
+    0         #         #         #
+             / \       / \       / \
+             1-5      #...#      ...  
+                     / \   \
+                    6- 10...30
 
 where each * is a cons cell and each # consists of four cons cells
 representing [X1, X2, X3, X4 | X5]. Do not think about this as a list 
